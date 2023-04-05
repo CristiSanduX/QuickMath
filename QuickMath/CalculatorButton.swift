@@ -10,9 +10,10 @@ import SwiftUI
 struct CalculatorButton: View {
     var buttonText: String = "1"
     var color: Color = Color(hue: 1.0, saturation: 0.0, brightness: 0.25)
+    var width: CGFloat = 90
     var body: some View {
         Text(buttonText)
-            .frame(width: 90, height: 90, alignment: .center)
+            .frame(width: width, height: 90, alignment: .center)
             .background(color)
             .foregroundColor(.white)
             .font(.largeTitle)

@@ -20,6 +20,23 @@ struct ContentView: View {
                     CalculatorButton(buttonText: "3")
                     CalculatorButton(buttonText: "+", color: .orange)
                 }
+                HStack {
+                    CalculatorButton(buttonText: "4")
+                    CalculatorButton(buttonText: "5")
+                    CalculatorButton(buttonText: "6")
+                    CalculatorButton(buttonText: "-", color: .orange)
+                }
+                HStack {
+                    CalculatorButton(buttonText: "7")
+                    CalculatorButton(buttonText: "8")
+                    CalculatorButton(buttonText: "9")
+                    CalculatorButton(buttonText: "x", color: .orange)
+                }
+                HStack {
+                    CalculatorButton(buttonText: "0",width: 190)
+                    CalculatorButton(buttonText: "C",color: .gray)
+                    CalculatorButton(buttonText: "=", color: .orange)
+                }
             }
         }
         .ignoresSafeArea()
