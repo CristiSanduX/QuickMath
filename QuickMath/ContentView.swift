@@ -16,10 +16,9 @@ struct ContentView: View {
                 TextValue()
                 HStack {
                     CalculatorButton()
-                    CalculatorButton()
-                    CalculatorButton()
-                    CalculatorButton()
-                    
+                    CalculatorButton(buttonText: "2")
+                    CalculatorButton(buttonText: "3")
+                    CalculatorButton(buttonText: "+", color: .orange)
                 }
             }
         }

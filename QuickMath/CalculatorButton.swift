@@ -9,10 +9,11 @@ import SwiftUI
 
 struct CalculatorButton: View {
     var buttonText: String = "1"
+    var color: Color = Color(hue: 1.0, saturation: 0.0, brightness: 0.25)
     var body: some View {
         Text(buttonText)
             .frame(width: 90, height: 90, alignment: .center)
-            .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.25))
+            .background(color)
             .foregroundColor(.white)
             .font(.largeTitle)
             .clipShape(RoundedRectangle(cornerRadius: 50))
