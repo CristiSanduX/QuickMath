@@ -11,7 +11,17 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color(.black)
-            TextValue()
+            
+            VStack {
+                TextValue()
+                HStack {
+                    CalculatorButton()
+                    CalculatorButton()
+                    CalculatorButton()
+                    CalculatorButton()
+                    
+                }
+            }
         }
         .ignoresSafeArea()
     }

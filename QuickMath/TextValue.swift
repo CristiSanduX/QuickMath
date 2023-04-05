@@ -12,7 +12,7 @@ struct TextValue: View {
     var body: some View {
         Text(value)
             .foregroundColor(.white)
-            .font(.system(size: 60))
+            .font(.system(size: 80))
             .fontWeight(.light)
             .padding()
     }

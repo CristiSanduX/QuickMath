@@ -12,6 +12,7 @@
 		1C937DB229DD77DD00463AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C937DB129DD77DD00463AF3 /* Assets.xcassets */; };
 		1C937DB629DD77DD00463AF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C937DB529DD77DD00463AF3 /* Preview Assets.xcassets */; };
 		1C937DBD29DD795E00463AF3 /* TextValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C937DBC29DD795E00463AF3 /* TextValue.swift */; };
+		1C937DBF29DD7A5700463AF3 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C937DBE29DD7A5700463AF3 /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1C937DB329DD77DD00463AF3 /* QuickMath.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickMath.entitlements; sourceTree = "<group>"; };
 		1C937DB529DD77DD00463AF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C937DBC29DD795E00463AF3 /* TextValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValue.swift; sourceTree = "<group>"; };
+		1C937DBE29DD7A5700463AF3 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				1C937DAD29DD77DB00463AF3 /* QuickMathApp.swift */,
 				1C937DAF29DD77DB00463AF3 /* ContentView.swift */,
+				1C937DBE29DD7A5700463AF3 /* CalculatorButton.swift */,
 				1C937DBC29DD795E00463AF3 /* TextValue.swift */,
 				1C937DB129DD77DD00463AF3 /* Assets.xcassets */,
 				1C937DB329DD77DD00463AF3 /* QuickMath.entitlements */,
@@ -145,6 +148,7 @@
 				1C937DBD29DD795E00463AF3 /* TextValue.swift in Sources */,
 				1C937DB029DD77DB00463AF3 /* ContentView.swift in Sources */,
 				1C937DAE29DD77DB00463AF3 /* QuickMathApp.swift in Sources */,
+				1C937DBF29DD7A5700463AF3 /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
