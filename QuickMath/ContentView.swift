@@ -11,10 +11,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color(.black)
-            Text("QuickMath")
-                .foregroundColor(.white)
-                .font(.largeTitle)
-                .fontWeight(.heavy)
+            TextValue()
         }
         .ignoresSafeArea()
     }
