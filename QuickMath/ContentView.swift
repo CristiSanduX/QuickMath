@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var currentValue = "0"
     var body: some View {
         ZStack {
             Color(.black)
             
             VStack {
-                TextValue()
+                TextValue(value: currentValue)
                 HStack {
                     CalculatorButton(action: didPressButton)
                     CalculatorButton(buttonText: "2", action: didPressButton)
@@ -43,7 +44,7 @@ struct ContentView: View {
     }
     
     func didPressButton(button: CalculatorButton) {
-        print(button.buttonText)
+        currentValue = button.buttonText
     }
 }
 
