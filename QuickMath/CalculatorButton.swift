@@ -11,13 +11,18 @@ struct CalculatorButton: View {
     var buttonText: String = "1"
     var color: Color = Color(hue: 1.0, saturation: 0.0, brightness: 0.25)
     var width: CGFloat = 90
+    var action: (CalculatorButton) -> Void = {_ in}
     var body: some View {
-        Text(buttonText)
-            .frame(width: width, height: 90, alignment: .center)
-            .background(color)
-            .foregroundColor(.white)
-            .font(.largeTitle)
-            .clipShape(RoundedRectangle(cornerRadius: 50))
+        Button {
+            action(self)
+        } label: {
+            Text(buttonText)
+                .frame(width: width, height: 90, alignment: .center)
+                .background(color)
+                .foregroundColor(.white)
+                .font(.largeTitle)
+                .clipShape(RoundedRectangle(cornerRadius: 50))
+        }
     }
 }
 
