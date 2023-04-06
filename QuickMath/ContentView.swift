@@ -16,35 +16,44 @@ struct ContentView: View {
             VStack {
                 TextValue(value: currentValue)
                 HStack {
-                    CalculatorButton(action: didPressButton)
-                    CalculatorButton(buttonText: "2", action: didPressButton)
-                    CalculatorButton(buttonText: "3")
-                    CalculatorButton(buttonText: "+", color: .orange)
+                    CalculatorButton(action: didPressNumber)
+                    CalculatorButton(buttonText: "2", action: didPressNumber)
+                    CalculatorButton(buttonText: "3", action: didPressNumber)
+                    CalculatorButton(buttonText: "+", color: .orange, action: didPressOperation)
                 }
                 HStack {
-                    CalculatorButton(buttonText: "4")
-                    CalculatorButton(buttonText: "5")
-                    CalculatorButton(buttonText: "6")
-                    CalculatorButton(buttonText: "-", color: .orange)
+                    CalculatorButton(buttonText: "4", action: didPressNumber)
+                    CalculatorButton(buttonText: "5", action: didPressNumber)
+                    CalculatorButton(buttonText: "6", action: didPressNumber)
+                    CalculatorButton(buttonText: "-", color: .orange, action: didPressOperation)
                 }
                 HStack {
-                    CalculatorButton(buttonText: "7")
-                    CalculatorButton(buttonText: "8")
-                    CalculatorButton(buttonText: "9")
-                    CalculatorButton(buttonText: "x", color: .orange)
+                    CalculatorButton(buttonText: "7", action: didPressNumber)
+                    CalculatorButton(buttonText: "8", action: didPressNumber)
+                    CalculatorButton(buttonText: "9", action: didPressNumber)
+                    CalculatorButton(buttonText: "x", color: .orange, action: didPressOperation)
                 }
                 HStack {
-                    CalculatorButton(buttonText: "0",width: 190)
-                    CalculatorButton(buttonText: "C",color: .gray)
-                    CalculatorButton(buttonText: "=", color: .orange)
+                    CalculatorButton(buttonText: "0", width: 190, action: didPressNumber)
+                    CalculatorButton(buttonText: "C",color: .gray, action: didPressClear)
+                    CalculatorButton(buttonText: "=", color: .orange, action: didPressEqual)
                 }
             }
         }
         .ignoresSafeArea()
     }
     
-    func didPressButton(button: CalculatorButton) {
+    func didPressNumber(button: CalculatorButton) {
         currentValue = button.buttonText
+    }
+    func didPressOperation(button: CalculatorButton) {
+        
+    }
+    func didPressEqual(button: CalculatorButton) {
+        
+    }
+    func didPressClear(button: CalculatorButton) {
+        
     }
 }
 
