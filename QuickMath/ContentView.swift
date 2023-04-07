@@ -94,6 +94,10 @@ struct ContentView: View {
     }
     func didPressClear(button: CalculatorButton) {
         currentValue = "0"
+        currentMode = .notSet
+        lastButtonWasMode = false
+        savedNumber = 0
+        currentValueInt = 0
     }
     func updateText() {
         if currentMode == .notSet {
