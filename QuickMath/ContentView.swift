@@ -18,6 +18,8 @@ struct ContentView: View {
     @State var currentValue = "0"
     @State var currentMode: CalculatorMode = .notSet
     @State var lastButtonWasMode: Bool = false
+    @State var savedNumber = 0
+    @State var currentValueInt = 0
     var body: some View {
         ZStack {
             Color(.black)
@@ -55,13 +57,16 @@ struct ContentView: View {
     func didPressNumber(button: CalculatorButton) {
         if lastButtonWasMode {
             lastButtonWasMode = false
+            currentValueInt = 0
         }
         
-        if let parsedValue = Int(currentValue+button.buttonText) {
-            currentValue = "\(parsedValue)"
+        if let parsedValue = Int("\(currentValueInt)"+button.buttonText) {
+            currentValueInt = parsedValue
+            updateText()
         }
         else {
             currentValue = "Error"
+            currentValueInt = 0
         }
     }
     func didPressMode(button: CalculatorButton) {
@@ -75,6 +80,12 @@ struct ContentView: View {
     }
     func didPressClear(button: CalculatorButton) {
         currentValue = "0"
+    }
+    func updateText() {
+        if currentMode == .notSet {
+            savedNumber = currentValueInt
+        }
+        currentValue = "\(currentValueInt)"
     }
 }
 
