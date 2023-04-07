@@ -44,7 +44,12 @@ struct ContentView: View {
     }
     
     func didPressNumber(button: CalculatorButton) {
-        currentValue = button.buttonText
+        if let parsedValue = Int(currentValue+button.buttonText) {
+            currentValue = "\(parsedValue)"
+        }
+        else {
+            currentValue = "Error"
+        }
     }
     func didPressOperation(button: CalculatorButton) {
         
@@ -53,7 +58,7 @@ struct ContentView: View {
         
     }
     func didPressClear(button: CalculatorButton) {
-        
+        currentValue = "0"
     }
 }
 

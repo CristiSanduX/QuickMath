@@ -15,6 +15,7 @@ struct TextValue: View {
             .font(.system(size: 80))
             .fontWeight(.light)
             .padding()
+            .lineLimit(1)
     }
 }
 
